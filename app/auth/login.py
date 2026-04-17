@@ -10,7 +10,7 @@ class LoginRequest(BaseModel):
 
 
 @router.post("/login")
-async def login(data: LoginRequest):
+def login(data: LoginRequest):
     # Replace this with real authentication logic
     if data.username != "admin" or data.password != "secret":
         raise HTTPException(status_code=401, detail="Invalid username or password")

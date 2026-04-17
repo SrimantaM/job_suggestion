@@ -31,7 +31,7 @@ class DashboardResponse(BaseModel):
 
 
 @router.get("/", response_model=DashboardResponse)
-async def get_dashboard():
+def get_dashboard():
     # Replace these with actual DB/service calls
     logged_in_users = [
         {"user_id": 1, "username": "alice", "last_login": "2026-04-13T09:21:00Z"},
